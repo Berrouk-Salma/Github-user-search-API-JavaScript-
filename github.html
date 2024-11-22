@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Search</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-black transition-colors duration-300 dark:bg-gray-800 dark:text-white">
+  <header class="p-4 text-center bg-gray-900 text-white">
+    <h1 class="text-2xl font-bold">GitHub User Search</h1>
+    <button id="theme-toggle" class="mt-2 px-4 py-2 text-sm font-medium bg-blue-600 rounded hover:bg-blue-500 transition">Switch Theme</button>
+  </header>
+  <main>
+    <section class="search-section flex justify-center mt-8">
+      <input type="text" id="search-input" placeholder="Enter GitHub username" class="p-2 border border-gray-300 rounded text-lg focus:outline-none focus:ring focus:ring-blue-300">
+      <button id="search-btn" class="ml-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">Search</button>
+    </section>
+    <section id="user-info" class="hidden text-center mt-8">
+      <img id="user-avatar" alt="User Avatar" class="mx-auto rounded-full border-2 border-gray-300">
+      <h2 id="user-name" class="mt-4 text-xl font-semibold"></h2>
+      <p id="user-bio" class="mt-2 text-gray-600 dark:text-gray-300"></p>
+      <ul class="mt-4 space-y-2">
+        <li>Repos: <span id="user-repos" class="font-semibold"></span></li>
+        <li>Followers: <span id="user-followers" class="font-semibold"></span></li>
+        <li>Following: <span id="user-following" class="font-semibold"></span></li>
+      </ul>
+    </section>
+    <p id="error-message" class="hidden mt-4 text-center text-red-500">User not found. Try again.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
